@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Editar Empleados</title>
+  </head>
+  <body>
+    <h1>Editar Empleado</h1>
+    <div class="container">
+      <form action="/edit/<%= empleado.id %>" method="post">
+        <label for="nombre">Nombre:</label>
+        <input
+          type="text"
+          name="nombre"
+          id="nombre"
+          value="<%= empleado.nombre %>"
+          required
+        />
+        <label for="apellido">Apellido:</label>
+        <input
+          type="text"
+          name="apellido"
+          id="apellido"
+          value="<%= empleado.apellido %>"
+          required
+        />
+        <label for="nombre">Telefono:</label>
+        <input
+          type="text"
+          name="telefono"
+          id="telefono"
+          value="<%= empleado.telefono %>"
+          required
+        />
+        <label for="nombre">Direccion:</label>
+        <input
+          type="text"
+          name="direccion"
+          id="direccion"
+          value="<%= empleado.direccion %>"
+          required
+        />
+        <label for="nombre">Sueldo Bruto:</label>
+        <input
+          type="text"
+          name="sueldo_bruto"
+          id="sueldo_bruto"
+          value="<%= empleado.sueldo_bruto %>"
+          required
+        />
+        <button type="submit">Actualizar</button>
+        <button href="/">Regresar</button>
+      </form>
+    </div>
+  </body>
+</html>

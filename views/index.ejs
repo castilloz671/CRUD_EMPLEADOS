@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Lista de Empleados</title>
+  </head>
+  <body>
+    <h1>Lista de Empleados</h1>
+    <div class="container">
+      <a href="/add" class="button">Agregar Empleado</a>
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Telefono</th>
+          <th>Direccion</th>
+          <th>Salario Bruto</th>
+          <th>Salario Neto</th>
+          <th>ARS</th>
+          <th>AFP</th>
+          <th>Acciones</th>
+        </tr>
+        <% empleados.forEach(empleado => { %>
+        <tr>
+          <td><%= empleado.id %></td>
+          <td><%= empleado.nombre %></td>
+          <td><%= empleado.apellido %></td>
+          <td><%= empleado.telefono %></td>
+          <td><%= empleado.direccion %></td>
+          <td><%= empleado.sueldo_bruto %></td>
+          <td><%= empleado.sueldo_neto %></td>
+          <td><%= empleado.ars %></td>
+          <td><%= empleado.afp %></td>
+          <td>
+            <a href="/edit/<%= empleado.id %>" class="button">Editar</a>
+            <a href="/delete/<%= empleado.id %>" class="button">Eliminar</a>
+          </td>
+        </tr>
+        <% }) %>
+      </table>
+    </div>
+  </body>
+</html>
